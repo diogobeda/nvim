@@ -49,6 +49,10 @@ now_if_args(function()
     'lua',
     'vimdoc',
     'markdown',
+    'ruby',
+    'zig',
+    'javascript',
+    'typescript',
     -- Add here more languages with which you want to use tree-sitter
     -- To see available languages:
     -- - Execute `:=require('nvim-treesitter').get_available()`
@@ -97,6 +101,8 @@ now_if_args(function()
   -- vim.lsp.enable({
   --   -- For example, if `lua-language-server` is installed, use `'lua_ls'` entry
   -- })
+  vim.lsp.enable('ruby_lsp')
+  vim.lsp.enable('zls')
 end)
 
 -- Formatting =================================================================
