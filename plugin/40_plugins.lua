@@ -165,3 +165,8 @@ later(function() add('rafamadriz/friendly-snippets') end)
 --   -- Enable only one
 --   vim.cmd('color everforest')
 -- end)
+
+now_if_args(function()
+  add('github/copilot.vim')
+  vim.cmd('Copilot setup')
+end)

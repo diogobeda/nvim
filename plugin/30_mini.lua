@@ -50,7 +50,7 @@ now(function() vim.cmd('colorscheme dracula') end)
 -- - `<C-hjkl>` (four combos) - navigate between windows.
 -- - `<M-hjkl>` in Insert/Command mode - navigate in that mode.
 --
--- See also:
+-- See als:
 -- - `:h MiniBasics.config.options` - list of adjusted options
 -- - `:h MiniBasics.config.mappings` - list of created mappings
 -- - `:h MiniBasics.config.autocommands` - list of created autocommands
