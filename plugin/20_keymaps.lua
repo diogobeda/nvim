@@ -60,6 +60,7 @@ _G.Config.leader_group_clues = {
   { mode = 'n', keys = '<Leader>s', desc = '+Session' },
   { mode = 'n', keys = '<Leader>t', desc = '+Terminal' },
   { mode = 'n', keys = '<Leader>v', desc = '+Visits' },
+  { mode = 'y', keys = '<Leader>y', desc = '+Yank' },
 
   { mode = 'x', keys = '<Leader>g', desc = '+Git' },
   { mode = 'x', keys = '<Leader>l', desc = '+Language' },
@@ -245,4 +246,9 @@ nmap_leader('vv', '<Cmd>lua MiniVisits.add_label("core")<CR>',    'Add "core" la
 nmap_leader('vV', '<Cmd>lua MiniVisits.remove_label("core")<CR>', 'Remove "core" label')
 nmap_leader('vl', '<Cmd>lua MiniVisits.add_label()<CR>',          'Add label')
 nmap_leader('vL', '<Cmd>lua MiniVisits.remove_label()<CR>',       'Remove label')
+
+-- y for 'Yank'
+--
+nmap_leader('yR', '<Cmd>let @+ = expand("%")<CR>', 'Yank relative path')
+nmap_leader('yA', '<Cmd>let @+ = expand("%:p")<CR>', 'Yank absolute path')
 -- stylua: ignore end
