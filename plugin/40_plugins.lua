@@ -53,6 +53,7 @@ now_if_args(function()
     'zig',
     'javascript',
     'typescript',
+    'sql'
     -- Add here more languages with which you want to use tree-sitter
     -- To see available languages:
     -- - Execute `:=require('nvim-treesitter').get_available()`
@@ -103,6 +104,24 @@ now_if_args(function()
   -- })
   vim.lsp.enable('ruby_lsp')
   vim.lsp.enable('zls')
+end)
+
+-- Rails-specific plugins ========================================================
+now_if_args(function()
+  add('tpope/vim-rails')
+  add('tpope/vim-rake')
+  add('tpope/vim-endwise')
+  add('tpope/vim-bundler')
+  add('vim-test/vim-test')
+
+  -- Enable Rails-specific functionality when opening a file in a Rails project
+  local is_rails_project = function()
+    return vim.fn.isdirectory('app') == 1 and vim.fn.filereadable('config/routes.rb') == 1
+  end
+  local rails_setup = function()
+    if is_rails_project() then vim.cmd('RailsEnable') end
+  end
+  -- _G.Config.new_autocmd('BufReadPost', '*', rails_setup, 'Enable vim-rails in Rails projects')
 end)
 
 -- Formatting =================================================================

@@ -12,6 +12,7 @@
 -- basic config and can be further improved.
 return {
    init_options = {
+     mason = false,
      formatter = 'standard',
      linters = {'standard'}
   },
