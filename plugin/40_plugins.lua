@@ -108,6 +108,7 @@ end)
 
 -- Rails-specific plugins ========================================================
 now_if_args(function()
+  add("tpope/vim-dispatch")
   add('tpope/vim-rails')
   add('tpope/vim-rake')
   add('tpope/vim-endwise')
